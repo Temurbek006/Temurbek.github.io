@@ -1,0 +1,228 @@
+/* 🌍 Reset & Base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Inter", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+body {
+    background: #f4f6f9; /* light corporate background */
+    color: #333;
+    line-height: 1.8;
+    font-size: 16px;
+    transition: background 0.5s, color 0.5s;
+}
+
+/* 🌅 Header / Profile */
+header {
+    text-align: center;
+    padding: 3rem 1rem;
+    background: #1A2A40; /* Deep corporate navy */
+    color: white;
+    border-bottom: 4px solid #D4AF37; /* Gold underline */
+}
+
+#profile-photo {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    border: 5px solid #D4AF37;
+    margin-bottom: 1.2rem;
+    object-fit: cover; /* rasm buzilmasin */
+    box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+}
+
+header h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 0.3rem;
+}
+
+header p {
+    font-size: 1rem;
+    opacity: 0.9;
+}
+
+header a {
+    color: #D4AF37;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+header a:hover {
+    text-decoration: underline;
+    color: #fff;
+}
+
+/* 📦 Sections */
+section {
+    padding: 2.5rem 10%;
+    max-width: 1100px;
+    margin: auto;
+}
+
+h2 {
+    color: #1A2A40;
+    margin-bottom: 1.2rem;
+    font-size: 1.6rem;
+    border-left: 5px solid #D4AF37;
+    padding-left: 0.7rem;
+    font-weight: 700;
+}
+
+/* 🪟 Cards (Experience / Education) */
+.experience, .education {
+    background: #fff;
+    border: 1px solid #e0e4eb;
+    border-radius: 10px;
+    padding: 1.5rem 2rem;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    transition: transform 0.25s, box-shadow 0.25s;
+}
+
+.experience:hover, .education:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+}
+
+.experience h3, .education h3 {
+    color: #1A2A40;
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.experience span, .education span {
+    color: #666;
+    font-size: 0.9rem;
+    display: block;
+    margin-bottom: 0.8rem;
+}
+
+/* ✅ Lists */
+ul {
+    list-style: none;
+    padding-left: 1rem;
+}
+
+ul li {
+    margin-bottom: 0.6rem;
+    position: relative;
+    padding-left: 1.2rem;
+}
+
+ul li::before {
+    content: "▹";
+    position: absolute;
+    left: 0;
+    color: #D4AF37;
+    font-weight: bold;
+}
+
+/* 📊 Table (Skills / Info) */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1.2rem;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.05);
+}
+
+th {
+    background: #1A2A40;
+    color: white;
+    padding: 1rem;
+    text-align: left;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+td {
+    padding: 0.9rem 1rem;
+    border-top: 1px solid #eee;
+    font-size: 0.95rem;
+}
+
+/* 🔥 Footer */
+footer {
+    text-align: center;
+    padding: 2rem 1rem;
+    background: #1A2A40;
+    color: white;
+    margin-top: 3rem;
+    border-top: 4px solid #D4AF37;
+    font-size: 0.9rem;
+}
+
+footer a {
+    color: #D4AF37;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+footer a:hover {
+    color: #fff;
+    text-decoration: underline;
+}
+
+/* 🌙 Dark Mode */
+body.dark {
+    background: #0f172a;
+    color: #ddd;
+}
+
+body.dark header {
+    background: #111827;
+    border-bottom-color: #D4AF37;
+}
+
+body.dark h2 {
+    color: #D4AF37;
+    border-left-color: #fff;
+}
+
+body.dark .experience, 
+body.dark .education, 
+body.dark table {
+    background: #1e293b;
+    border-color: #2d3748;
+    color: #eee;
+}
+
+body.dark td {
+    border-top: 1px solid #334155;
+    color: #eee;
+}
+
+body.dark th {
+    background: #2d3748;
+}
+
+body.dark footer {
+    background: #111827;
+    border-top-color: #D4AF37;
+}
+
+/* 📱 Responsiv dizayn */
+@media (max-width: 768px) {
+    section {
+        padding: 2rem 5%;
+    }
+    header h2 {
+        font-size: 1.6rem;
+    }
+    #profile-photo {
+        width: 100px;
+        height: 100px;
+    }
+    h2 {
+        font-size: 1.4rem;
+    }
+}

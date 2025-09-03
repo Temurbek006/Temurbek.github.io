@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact</title>
+  <style>
+    body {
+      font-family: "Inter", "Segoe UI", Arial, sans-serif;
+      background: #f4f6f9;
+      color: #333;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    h3 {
+      margin-top: 2rem;
+      color: #1A2A40;
+      font-size: 1.8rem;
+      font-weight: 700;
+    }
+
+    /* 🔙 Back button */
+    .back-btn {
+      position: relative;
+      display: inline-block;
+      font-weight: 600;
+      color: #1A2A40;
+      text-decoration: none;
+      transition: color 0.3s;
+      padding-left: 1.2rem; /* strelka uchun joy */
+    }
+
+    .back-btn::before {
+      content: "←";
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      transition: transform 0.3s, color 0.3s;
+      color: #1A2A40;
+    }
+
+    .back-btn:hover {
+      color: #D4AF37;
+    }
+
+    .back-btn:hover::before {
+      color: #D4AF37;
+      transform: translate(-4px, -50%);
+    }
+
+    form {
+      background: #fff;
+      padding: 2rem 2.5rem;
+      border-radius: 12px;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+      margin-top: 1.5rem;
+      width: 100%;
+      max-width: 500px;
+    }
+
+    .field {
+      margin-bottom: 1.2rem;
+      display: flex;
+      flex-direction: column;
+    }
+
+    label {
+      font-weight: 600;
+      margin-bottom: 0.4rem;
+      color: #1A2A40;
+    }
+
+    input, textarea {
+      padding: 0.75rem 1rem;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 1rem;
+      outline: none;
+      transition: border-color 0.3s, box-shadow 0.3s;
+    }
+
+    input:focus, textarea:focus {
+      border-color: #1A2A40;
+      box-shadow: 0 0 6px rgba(26, 42, 64, 0.2);
+    }
+
+    textarea {
+      resize: vertical;
+    }
+
+    button {
+      background: #1A2A40;
+      color: white;
+      padding: 0.8rem 1.5rem;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 1rem;
+      font-weight: 600;
+      transition: background 0.3s, transform 0.2s;
+      width: 100%;
+    }
+
+    button:hover {
+      background: #D4AF37;
+      color: #1A2A40;
+      transform: translateY(-2px);
+    }
+  </style>
+</head>
+<body>
+  <h4>
+    <a href="./index.html" class="back-btn">Back to Portfolio</a>
+  </h4>
+
+  <h3>Contact Me</h3>
+
+  <form action="contact.php" method="POST">
+    <div class="field">
+      <label for="firstname">Firstname</label>
+      <input type="text" name="firstname" id="firstname" required>
+    </div>
+    <div class="field">
+      <label for="lastname">Lastname</label>
+      <input type="text" name="lastname" id="lastname" required>
+    </div>
+    <div class="field">
+      <label for="email">Email</label>
+      <input type="email" name="email" id="email" required>
+    </div>
+    <div class="field">
+      <label for="message">Message</label>
+      <textarea name="message" id="message" rows="6" required></textarea>
+    </div>
+    <button type="submit">Send Message</button>
+  </form>
+
+  <link rel="stylesheet" href="style.css">
+</body>
+</html>
